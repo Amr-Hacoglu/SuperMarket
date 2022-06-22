@@ -149,9 +149,9 @@ namespace SuperMarket
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SellerForm sell = new SellerForm();
-            sell.Show();
             this.Hide();
+            Form login = new Form1();
+            login.Show();
         }
     }
 }

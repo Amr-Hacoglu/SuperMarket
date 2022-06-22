@@ -13,7 +13,7 @@ namespace SuperMarket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SellingForm()); // we change the object from From1 to splash to start from it
+            Application.Run(new Splash()); // we change the object from From1 to splash to start from it
         }
     }
 }

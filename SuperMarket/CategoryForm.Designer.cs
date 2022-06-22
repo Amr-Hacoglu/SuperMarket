@@ -222,11 +222,11 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.button3.Location = new System.Drawing.Point(-36, 188);
+            this.button3.Location = new System.Drawing.Point(-4, 532);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(198, 43);
+            this.button3.Size = new System.Drawing.Size(166, 43);
             this.button3.TabIndex = 12;
-            this.button3.Text = "Selling";
+            this.button3.Text = "Logout";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

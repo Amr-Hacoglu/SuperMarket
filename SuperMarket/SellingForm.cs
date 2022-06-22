@@ -15,6 +15,23 @@ namespace SuperMarket
     public partial class SellingForm : Form
     {
 
+        private void FillCombo()
+        {
+            // this method will bind the Combobox with the Database
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT CatName FROM CategoryTBL", con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CatName", typeof(string));
+            dt.Load(rdr);
+            //CatCbTbl.ValueMember = "CatName";
+            //CatCbTbl.DataSource = dt;
+            SellCatCbTbl.ValueMember = "CatName";
+            SellCatCbTbl.DataSource = dt;
+            con.Close();
+        }
+
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\90538\Desktop\C#\C# SuperMarket\SuperMarket\SuperMarket\Database1.mdf;Integrated Security=True");
         private void populate()
         {
@@ -51,9 +68,11 @@ namespace SuperMarket
         {
             populate();
             populateBills();
+            FillCombo();
+            SellerNameTbl.Text = Form1.SellerName;
         }
 
-        int flag = 0;
+        //int flag = 0;
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -65,6 +84,7 @@ namespace SuperMarket
             // To fill the data on up
             SellProdNameTbl.Text = SellProdDGV.SelectedRows[0].Cells[0].Value.ToString();
             SellProdPriceTbl.Text = SellProdDGV.SelectedRows[0].Cells[1].Value.ToString();
+            //flag = 1;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -133,7 +153,7 @@ namespace SuperMarket
 
         private void BillsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            flag = 1;
+            //flag = 1;
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -144,6 +164,40 @@ namespace SuperMarket
             e.Graphics.DrawString("Date : " + BillsDGV.SelectedRows[0].Cells[2].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(100, 130));
             e.Graphics.DrawString("Total Amount  : " + BillsDGV.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Blue, new Point(100, 160));
             e.Graphics.DrawString("CodeSpace", new Font("Century Gothic", 20, FontStyle.Italic), Brushes.Red, new Point(270,230));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void SellCatCbTbl_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "SELECT ProdName,ProdQty FROM ProductTBL WHERE ProdCat ='" + SellCatCbTbl.SelectedValue.ToString() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            SellProdDGV.DataSource = ds.Tables[0];
+            con.Close();
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form login = new Form1();
+            login.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellCatCbTbl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void label7_Click(object sender, EventArgs e)

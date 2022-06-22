@@ -46,6 +46,8 @@ namespace SuperMarket
             dt.Load(rdr);
             CatCbTbl.ValueMember = "CatName";
             CatCbTbl.DataSource = dt;
+            SearchCb.ValueMember = "CatName";
+            SearchCb.DataSource = dt;
             con.Close();
         }
         private void ProductForm_Load(object sender, EventArgs e)
@@ -150,9 +152,17 @@ namespace SuperMarket
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SellerForm sell = new SellerForm();
-            sell.Show();
             this.Hide();
+            Form login = new Form1();
+            login.Show();
+            //SellingForm sell = new SellingForm();
+            //sell.Show();
+            //this.Hide();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

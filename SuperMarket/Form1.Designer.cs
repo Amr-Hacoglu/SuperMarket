@@ -101,7 +101,7 @@
             this.PassTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PassTb.HintForeColor = System.Drawing.Color.Empty;
             this.PassTb.HintText = "";
-            this.PassTb.isPassword = false;
+            this.PassTb.isPassword = true;
             this.PassTb.LineFocusedColor = System.Drawing.Color.DarkOrange;
             this.PassTb.LineIdleColor = System.Drawing.Color.OrangeRed;
             this.PassTb.LineMouseHoverColor = System.Drawing.Color.DarkOrange;
