@@ -35,19 +35,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
+            this.ProdDGV = new Guna.UI.WinForms.GunaDataGridView();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ProdPriceTbl = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.ProdQtyTbl = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.ProdNameTbl = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.CatCbTbl = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.ProdIDTbl = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,19 +64,19 @@
             this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.gunaDataGridView1);
+            this.panel1.Controls.Add(this.ProdDGV);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.bunifuMaterialTextbox4);
-            this.panel1.Controls.Add(this.bunifuMaterialTextbox3);
-            this.panel1.Controls.Add(this.bunifuMaterialTextbox1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.ProdPriceTbl);
+            this.panel1.Controls.Add(this.ProdQtyTbl);
+            this.panel1.Controls.Add(this.ProdNameTbl);
+            this.panel1.Controls.Add(this.CatCbTbl);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.bunifuMaterialTextbox2);
+            this.panel1.Controls.Add(this.ProdIDTbl);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(163, 64);
@@ -113,64 +113,65 @@
             this.comboBox2.TabIndex = 21;
             this.comboBox2.Text = "Select Category";
             // 
-            // gunaDataGridView1
+            // ProdDGV
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ProdDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ProdDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProdDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ProdDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ProdDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.ProdDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gunaDataGridView1.ColumnHeadersHeight = 4;
+            this.ProdDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ProdDGV.ColumnHeadersHeight = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gunaDataGridView1.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.Location = new System.Drawing.Point(319, 88);
-            this.gunaDataGridView1.Name = "gunaDataGridView1";
-            this.gunaDataGridView1.RowHeadersVisible = false;
-            this.gunaDataGridView1.RowHeadersWidth = 51;
-            this.gunaDataGridView1.RowTemplate.Height = 24;
-            this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(478, 401);
-            this.gunaDataGridView1.TabIndex = 20;
-            this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ProdDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ProdDGV.EnableHeadersVisualStyles = false;
+            this.ProdDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ProdDGV.Location = new System.Drawing.Point(319, 88);
+            this.ProdDGV.Name = "ProdDGV";
+            this.ProdDGV.RowHeadersVisible = false;
+            this.ProdDGV.RowHeadersWidth = 51;
+            this.ProdDGV.RowTemplate.Height = 24;
+            this.ProdDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProdDGV.Size = new System.Drawing.Size(478, 401);
+            this.ProdDGV.TabIndex = 20;
+            this.ProdDGV.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.ProdDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.ProdDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.ProdDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ProdDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Black;
+            this.ProdDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ProdDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.ProdDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.ProdDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ProdDGV.ThemeStyle.HeaderStyle.Height = 30;
+            this.ProdDGV.ThemeStyle.ReadOnly = false;
+            this.ProdDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.ProdDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.ProdDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.ProdDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ProdDGV.ThemeStyle.RowsStyle.Height = 24;
+            this.ProdDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ProdDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ProdDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gunaDataGridView1_CellContentClick);
             // 
             // button9
             // 
@@ -185,6 +186,7 @@
             this.button9.TabIndex = 19;
             this.button9.Text = "DELETE";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -199,6 +201,7 @@
             this.button8.TabIndex = 18;
             this.button8.Text = "EDIT";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button4
             // 
@@ -213,77 +216,78 @@
             this.button4.TabIndex = 15;
             this.button4.Text = "ADD";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // bunifuMaterialTextbox4
+            // ProdPriceTbl
             // 
-            this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox4.HintText = "";
-            this.bunifuMaterialTextbox4.isPassword = false;
-            this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox4.LineThickness = 2;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(112, 161);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(163, 31);
-            this.bunifuMaterialTextbox4.TabIndex = 14;
-            this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ProdPriceTbl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProdPriceTbl.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.ProdPriceTbl.ForeColor = System.Drawing.Color.Black;
+            this.ProdPriceTbl.HintForeColor = System.Drawing.Color.White;
+            this.ProdPriceTbl.HintText = "";
+            this.ProdPriceTbl.isPassword = false;
+            this.ProdPriceTbl.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdPriceTbl.LineIdleColor = System.Drawing.Color.White;
+            this.ProdPriceTbl.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdPriceTbl.LineThickness = 2;
+            this.ProdPriceTbl.Location = new System.Drawing.Point(112, 161);
+            this.ProdPriceTbl.Margin = new System.Windows.Forms.Padding(4);
+            this.ProdPriceTbl.Name = "ProdPriceTbl";
+            this.ProdPriceTbl.Size = new System.Drawing.Size(163, 31);
+            this.ProdPriceTbl.TabIndex = 14;
+            this.ProdPriceTbl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox3
+            // ProdQtyTbl
             // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox3.LineThickness = 2;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(112, 125);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(163, 31);
-            this.bunifuMaterialTextbox3.TabIndex = 13;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ProdQtyTbl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProdQtyTbl.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.ProdQtyTbl.ForeColor = System.Drawing.Color.Black;
+            this.ProdQtyTbl.HintForeColor = System.Drawing.Color.White;
+            this.ProdQtyTbl.HintText = "";
+            this.ProdQtyTbl.isPassword = false;
+            this.ProdQtyTbl.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdQtyTbl.LineIdleColor = System.Drawing.Color.White;
+            this.ProdQtyTbl.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdQtyTbl.LineThickness = 2;
+            this.ProdQtyTbl.Location = new System.Drawing.Point(112, 125);
+            this.ProdQtyTbl.Margin = new System.Windows.Forms.Padding(4);
+            this.ProdQtyTbl.Name = "ProdQtyTbl";
+            this.ProdQtyTbl.Size = new System.Drawing.Size(163, 31);
+            this.ProdQtyTbl.TabIndex = 13;
+            this.ProdQtyTbl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox1
+            // ProdNameTbl
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox1.LineThickness = 2;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(112, 88);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(163, 31);
-            this.bunifuMaterialTextbox1.TabIndex = 12;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ProdNameTbl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProdNameTbl.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.ProdNameTbl.ForeColor = System.Drawing.Color.Black;
+            this.ProdNameTbl.HintForeColor = System.Drawing.Color.White;
+            this.ProdNameTbl.HintText = "";
+            this.ProdNameTbl.isPassword = false;
+            this.ProdNameTbl.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdNameTbl.LineIdleColor = System.Drawing.Color.White;
+            this.ProdNameTbl.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdNameTbl.LineThickness = 2;
+            this.ProdNameTbl.Location = new System.Drawing.Point(112, 88);
+            this.ProdNameTbl.Margin = new System.Windows.Forms.Padding(4);
+            this.ProdNameTbl.Name = "ProdNameTbl";
+            this.ProdNameTbl.Size = new System.Drawing.Size(163, 31);
+            this.ProdNameTbl.TabIndex = 12;
+            this.ProdNameTbl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // comboBox1
+            // CatCbTbl
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.comboBox1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CatCbTbl.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.CatCbTbl.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.CatCbTbl.FormattingEnabled = true;
+            this.CatCbTbl.Items.AddRange(new object[] {
             "Admin",
             "Seller"});
-            this.comboBox1.Location = new System.Drawing.Point(112, 210);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 28);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Select Category";
+            this.CatCbTbl.Location = new System.Drawing.Point(112, 210);
+            this.CatCbTbl.Name = "CatCbTbl";
+            this.CatCbTbl.Size = new System.Drawing.Size(163, 28);
+            this.CatCbTbl.TabIndex = 11;
+            this.CatCbTbl.Text = "Select Category";
             // 
             // label6
             // 
@@ -329,24 +333,24 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Name";
             // 
-            // bunifuMaterialTextbox2
+            // ProdIDTbl
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuMaterialTextbox2.LineThickness = 2;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(112, 52);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(163, 31);
-            this.bunifuMaterialTextbox2.TabIndex = 3;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ProdIDTbl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProdIDTbl.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.ProdIDTbl.ForeColor = System.Drawing.Color.Black;
+            this.ProdIDTbl.HintForeColor = System.Drawing.Color.White;
+            this.ProdIDTbl.HintText = "";
+            this.ProdIDTbl.isPassword = false;
+            this.ProdIDTbl.LineFocusedColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdIDTbl.LineIdleColor = System.Drawing.Color.White;
+            this.ProdIDTbl.LineMouseHoverColor = System.Drawing.Color.WhiteSmoke;
+            this.ProdIDTbl.LineThickness = 2;
+            this.ProdIDTbl.Location = new System.Drawing.Point(112, 52);
+            this.ProdIDTbl.Margin = new System.Windows.Forms.Padding(4);
+            this.ProdIDTbl.Name = "ProdIDTbl";
+            this.ProdIDTbl.Size = new System.Drawing.Size(163, 31);
+            this.ProdIDTbl.TabIndex = 3;
+            this.ProdIDTbl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
@@ -382,6 +386,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Sellers";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -395,6 +400,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Categories";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -408,13 +414,14 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Selling";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.button5.ForeColor = System.Drawing.Color.SaddleBrown;
             this.button5.Location = new System.Drawing.Point(955, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(34, 34);
@@ -442,9 +449,10 @@
             this.Name = "ProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductForm";
+            this.Load += new System.EventHandler(this.ProductForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,20 +466,20 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox ProdIDTbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private System.Windows.Forms.ComboBox CatCbTbl;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox ProdPriceTbl;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox ProdQtyTbl;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox ProdNameTbl;
         private System.Windows.Forms.Button button4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private Guna.UI.WinForms.GunaDataGridView gunaDataGridView1;
+        private Guna.UI.WinForms.GunaDataGridView ProdDGV;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button6;
     }
